@@ -180,6 +180,8 @@ main .about-content {
   display: flex;
   justify-content: space-between;
   padding: 5% 1%;
+  border-top: 1px black solid;
+  border-bottom: 1px black solid;
 }
 main .about-content .img-container {
   max-width: 48%;
@@ -189,4 +191,27 @@ main .about-content .img-container img {
 }
 main .about-content .about-container {
   max-width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+main .about-content .about-container .self {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  letter-spacing: 1.5px;
+  line-height: 3;
+}
+main .about-content .about-container .self h1 {
+  padding: 1%;
+  font-size: 3rem;
+}
+main .about-content .about-container .self h2 {
+  padding: 2% 0 5%;
+  font-size: 2rem;
+}
+main .about-content .about-container .about {
+  text-align: right;
+  line-height: 2;
+  align-self: flex-end;
 }
