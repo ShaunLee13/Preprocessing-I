@@ -149,7 +149,7 @@ h5 {
 }
 p {
   font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 header {
   display: flex;
@@ -175,4 +175,18 @@ header h3 {
 }
 header .role {
   text-align: end;
+}
+main .about-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 5% 1%;
+}
+main .about-content .img-container {
+  max-width: 48%;
+}
+main .about-content .img-container img {
+  max-width: 100%;
+}
+main .about-content .about-container {
+  max-width: 48%;
 }

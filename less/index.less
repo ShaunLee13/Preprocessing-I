@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5{
 
 p{
 	font-family:@content;
-	font-size:2rem;
+	font-size:1rem;
 }	
 //End of General Styling
 
@@ -115,5 +115,23 @@ header{
 	.role{
 		text-align: end;
 	}//End of Header.role Styling
-
 } //End of Header Styling
+
+main{
+	.about-content{
+		.spacing();
+		padding:5% 1%;
+
+		.img-container{
+			max-width: 48%;
+
+			img{
+				max-width: 100%;
+			}
+		}//End of Img-Container Styling
+		
+		.about-container{
+			max-width: 48%;
+		}
+	}//End of About-Content Styling
+}//End of Main Content Styling
