@@ -73,7 +73,7 @@ body{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	align-items: space-evenly;
+	align-items: flex-start;
 }
 .segment(){
 	padding:2% 0 5%;
@@ -104,24 +104,56 @@ header{
 	padding: 1% 0;
 	border-bottom: 2px solid black;
 
+	@media(max-width:500px){
+		display: flex;
+		flex-flow: column;
+		align-items: flex-start;
+	}//Header MQ
+
 	nav{
 		.spacing();
-		width:30%;
+		width:50%;
+		margin-right:5%;
+
+		@media(max-width:500px){
+			width:50%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-self: center;
+			margin:2%;
+		}//Nav MQ
 
 		a{
 			.button();
+
+			@media(max-width:500px){
+				margin: 1%;
+				text-align: center;
+			}//Nav-A MQ
 		}//End of Nav-A styling
 	}//End of Header-Nav Styling
 	h3{
 		width:10%;
 		justify-self:flex-end;
 		align-self: flex-end;
+
+		@media(max-width:500px){
+			width:100%;
+			text-align:center;
+			padding:3% 0;
+		}//H3 MQ
 	}//End of Header-H3 Styling	
 	.role{
 		width: 25%;
 		text-align: end;
+
+		@media(max-width: 500px){
+			width: 98%;
+			text-align: center;
+		}//.role MQ
 	}//End of Header.role Styling
-} //End of Header Styling
+}  //End of Header Styling
 
 //Beginning of Main Content Styling
 main{
@@ -130,8 +162,19 @@ main{
 		padding:@space;
 		border-top: 1px black solid;
 		border-bottom: 1px black solid;
+
+		@media(max-width:500px){
+			max-width:96%;
+			.details();
+			align-items: center;
+		}//About Content MQ
+
 		.img-container{
 			max-width: 48%;
+
+			@media(max-width:500px){
+				max-width: 80%;
+			}//img-container MQ
 
 			img{
 				max-width: 100%;
@@ -144,17 +187,27 @@ main{
 			flex-direction: column;
 			justify-content: space-around;
 
+			@media(max-width:500px){
+				max-width:96%;
+			}//about container MQ
+
 			.self{
 				display: flex;
 				flex-direction: column;
 				text-align: center;
 				letter-spacing: 1.5px;
 				line-height: 3;
+
+				@media(max-width:500px){
+				line-height: 1.5;
+				}//self MQ
+
 				h1{
 					padding:1%;
 					font-size: 3.5rem;
 					font-style: oblique;
 				}
+
 				h2{
 					.segment();
 				}
@@ -164,6 +217,11 @@ main{
 				text-align: right;
 				line-height: 2;
 				align-self: flex-end;
+
+				@media(max-width:500px){
+					line-height: 1.5;
+					text-align: left;
+				}//about MQ
 			}//End of About Styling
 		}//End of About-Container Styling
 	}//End of About-Content Styling
@@ -172,16 +230,31 @@ main{
 		padding:@space;
 		.spacing();
 
+		@media(max-width:500px){
+			max-width:90%;
+			padding-left:5%;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
 		section{
 			width: 50%;
 			.details();
 
+			@media(max-width:500px){
+				width: 100%;
+			}
 			h2{
 				.segment();
+
+				@media(max-width:500px){
+				align-self: center;
+				}
 			}//End of Section H2s
 
 			.education{
 				padding-bottom: 5%;
+				
 				li{
 				padding:5% 0 10%;
 				line-height: 1.5;
@@ -204,6 +277,11 @@ main{
 			border-left: 1px solid gray;
 			padding-left: 5%;
 
+			@media(max-width:500px){
+			padding:6% 0 0;
+			border: 0;
+			}
+
 			li{
 				padding: 5% 0;
 				line-height: 1.5;
@@ -219,21 +297,42 @@ footer{
 	display:flex;
 	flex-direction: column;
 
+	@media(max-width:500px){
+		max-width: 90%;
+		align-content: center;
+	}
+
 	.contact{
 		padding: 1% 0;
-		width: 100%;
+		width: 98%;
 		display: flex;
 		justify-content: space-between;
+
+		@media(max-width:500px){
+			max-width: 100%;
+			flex-direction: column;
+			padding-bottom: 3%;
+		}
 
 		p{
 			width: 33%;
 
+			@media(max-width:500px){
+				width:100%;
+				padding:2% 0 1%;
+				text-align: center;
+			}
+			
 		}//End of Contact-P
 		.phone{
 			text-align: center;
 		}//End of P-Phone
 		.email{
 			text-align: right;
+
+			@media(max-width:500px){
+				text-align: center;
+			}
 		}//End of P-Email
 
 	}//End of Contact Section
@@ -248,6 +347,6 @@ footer{
 			.button();
 			font-size: 1.25rem;
 			white-space: nowrap;
-		}
-	}	
-}
+		}//End of Portfolio Button
+	}//End of Portfolio
+}//End of Footer

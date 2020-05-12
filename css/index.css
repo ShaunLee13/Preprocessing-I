@@ -159,10 +159,28 @@ header {
   padding: 1% 0;
   border-bottom: 2px solid black;
 }
+@media (max-width: 500px) {
+  header {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+  }
+}
 header nav {
   display: flex;
   justify-content: space-between;
-  width: 30%;
+  width: 50%;
+  margin-right: 5%;
+}
+@media (max-width: 500px) {
+  header nav {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    margin: 2%;
+  }
 }
 header nav a {
   padding: 4%;
@@ -170,14 +188,33 @@ header nav a {
   color: black;
   text-decoration: none;
 }
+@media (max-width: 500px) {
+  header nav a {
+    margin: 1%;
+    text-align: center;
+  }
+}
 header h3 {
   width: 10%;
   justify-self: flex-end;
   align-self: flex-end;
 }
+@media (max-width: 500px) {
+  header h3 {
+    width: 100%;
+    text-align: center;
+    padding: 3% 0;
+  }
+}
 header .role {
   width: 25%;
   text-align: end;
+}
+@media (max-width: 500px) {
+  header .role {
+    width: 98%;
+    text-align: center;
+  }
 }
 main .about-content {
   display: flex;
@@ -186,8 +223,23 @@ main .about-content {
   border-top: 1px black solid;
   border-bottom: 1px black solid;
 }
+@media (max-width: 500px) {
+  main .about-content {
+    max-width: 96%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-items: center;
+  }
+}
 main .about-content .img-container {
   max-width: 48%;
+}
+@media (max-width: 500px) {
+  main .about-content .img-container {
+    max-width: 80%;
+  }
 }
 main .about-content .img-container img {
   max-width: 100%;
@@ -198,12 +250,22 @@ main .about-content .about-container {
   flex-direction: column;
   justify-content: space-around;
 }
+@media (max-width: 500px) {
+  main .about-content .about-container {
+    max-width: 96%;
+  }
+}
 main .about-content .about-container .self {
   display: flex;
   flex-direction: column;
   text-align: center;
   letter-spacing: 1.5px;
   line-height: 3;
+}
+@media (max-width: 500px) {
+  main .about-content .about-container .self {
+    line-height: 1.5;
+  }
 }
 main .about-content .about-container .self h1 {
   padding: 1%;
@@ -219,21 +281,45 @@ main .about-content .about-container .about {
   line-height: 2;
   align-self: flex-end;
 }
+@media (max-width: 500px) {
+  main .about-content .about-container .about {
+    line-height: 1.5;
+    text-align: left;
+  }
+}
 main .talent {
   padding: 5% 2%;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 500px) {
+  main .talent {
+    max-width: 90%;
+    padding-left: 5%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 main .talent section {
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: space-evenly;
+  align-items: flex-start;
+}
+@media (max-width: 500px) {
+  main .talent section {
+    width: 100%;
+  }
 }
 main .talent section h2 {
   padding: 2% 0 5%;
   font-size: 2rem;
+}
+@media (max-width: 500px) {
+  main .talent section h2 {
+    align-self: center;
+  }
 }
 main .talent section .education {
   padding-bottom: 5%;
@@ -253,10 +339,16 @@ main .talent .experience {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: space-evenly;
+  align-items: flex-start;
   justify-content: flex-start;
   border-left: 1px solid gray;
   padding-left: 5%;
+}
+@media (max-width: 500px) {
+  main .talent .experience {
+    padding: 6% 0 0;
+    border: 0;
+  }
 }
 main .talent .experience li {
   padding: 5% 0;
@@ -268,20 +360,45 @@ footer {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 500px) {
+  footer {
+    max-width: 90%;
+    align-content: center;
+  }
+}
 footer .contact {
   padding: 1% 0;
-  width: 100%;
+  width: 98%;
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  footer .contact {
+    max-width: 100%;
+    flex-direction: column;
+    padding-bottom: 3%;
+  }
+}
 footer .contact p {
   width: 33%;
+}
+@media (max-width: 500px) {
+  footer .contact p {
+    width: 100%;
+    padding: 2% 0 1%;
+    text-align: center;
+  }
 }
 footer .contact .phone {
   text-align: center;
 }
 footer .contact .email {
   text-align: right;
+}
+@media (max-width: 500px) {
+  footer .contact .email {
+    text-align: center;
+  }
 }
 footer .portfolio {
   margin-top: 2%;
