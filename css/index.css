@@ -179,7 +179,7 @@ header .role {
 main .about-content {
   display: flex;
   justify-content: space-between;
-  padding: 5% 1%;
+  padding: 5% 2%;
   border-top: 1px black solid;
   border-bottom: 1px black solid;
 }
@@ -214,4 +214,16 @@ main .about-content .about-container .about {
   text-align: right;
   line-height: 2;
   align-self: flex-end;
+}
+main .talent {
+  padding: 5% 2%;
+  display: flex;
+  justify-content: space-between;
+}
+main .talent section {
+  width: 46%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }

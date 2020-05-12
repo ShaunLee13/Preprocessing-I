@@ -65,7 +65,8 @@ body{
 
 @content: 'Montserrat', sans-serif;
 @heading: 'Josefin Sans', sans-serif;
-@space: 5% 1%;
+@segment: 2rem;
+@space: 5% 2%;
 .center(){
 	display: flex;
 	justify-content: center;
@@ -74,6 +75,12 @@ body{
 .spacing(){
 	display: flex;
 	justify-content: space-between;
+}
+.details(){
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
 }
 .button(){
 	padding:2%;
@@ -92,7 +99,7 @@ p{
 }	
 //End of General Styling
 
-//Beginner of Header Styling
+//Beginning of Header Styling
 header{
 	.spacing();
 	padding: 1% 0;
@@ -118,6 +125,7 @@ header{
 	}//End of Header.role Styling
 } //End of Header Styling
 
+//Beginning of Main Content Styling
 main{
 	.about-content{
 		.spacing();
@@ -150,7 +158,7 @@ main{
 				}
 				h2{
 					padding:2% 0 5%;
-					font-size:2rem;
+					font-size:@segment;
 				}
 			}//End of Self Styling
 
@@ -161,4 +169,16 @@ main{
 			}//End of About Styling
 		}//End of About-Container Styling
 	}//End of About-Content Styling
+
+	.talent{
+		padding:@space;
+		.spacing();
+
+		section{
+			width: 46%;
+			.details();
+		}
+	}//End of Talent Styling
 }//End of Main Content Styling
+
+//Beginning of Footer Styling
