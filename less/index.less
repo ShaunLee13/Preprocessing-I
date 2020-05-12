@@ -19,7 +19,6 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	// border: 1px solid gray;  //Border for Placement View
 	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
@@ -66,11 +65,6 @@ body{
 @content: 'Montserrat', sans-serif;
 @heading: 'Josefin Sans', sans-serif;
 @space: 5% 2%;
-.center(){
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
 .spacing(){
 	display: flex;
 	justify-content: space-between;
@@ -79,15 +73,17 @@ body{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	align-items: flex-start;
+	align-items: space-evenly;
 }
 .segment(){
 	padding:2% 0 5%;
 	font-size:2rem;
 }
 .button(){
-	padding:2%;
+	padding:4%;
 	background-color:rgb(232, 230, 223);
+	color:black;
+	text-decoration: none;
 }
 
 h1, h2, h3, h4, h5{
@@ -96,7 +92,7 @@ h1, h2, h3, h4, h5{
 	text-transform: uppercase;
 }
 
-p, li{
+p, li, a{
 	font-family:@content;
 	font-size:1rem;
 }	
@@ -113,8 +109,6 @@ header{
 		width:30%;
 
 		a{
-			color:black;
-			text-decoration: none;
 			.button();
 		}//End of Nav-A styling
 	}//End of Header-Nav Styling
@@ -219,3 +213,41 @@ main{
 }//End of Main Content Styling
 
 //Beginning of Footer Styling
+footer{
+	margin-bottom: 3%;
+	border-top: 1px black solid;
+	display:flex;
+	flex-direction: column;
+
+	.contact{
+		padding: 1% 0;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+
+		p{
+			width: 33%;
+
+		}//End of Contact-P
+		.phone{
+			text-align: center;
+		}//End of P-Phone
+		.email{
+			text-align: right;
+		}//End of P-Email
+
+	}//End of Contact Section
+
+	.portfolio{
+		margin-top: 2%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		a{
+			.button();
+			font-size: 1.25rem;
+			white-space: nowrap;
+		}
+	}	
+}

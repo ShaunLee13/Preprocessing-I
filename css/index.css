@@ -148,7 +148,8 @@ h5 {
   text-transform: uppercase;
 }
 p,
-li {
+li,
+a {
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
 }
@@ -164,10 +165,10 @@ header nav {
   width: 30%;
 }
 header nav a {
+  padding: 4%;
+  background-color: #e8e6df;
   color: black;
   text-decoration: none;
-  padding: 2%;
-  background-color: #e8e6df;
 }
 header h3 {
   width: 10%;
@@ -228,7 +229,7 @@ main .talent section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: space-evenly;
 }
 main .talent section h2 {
   padding: 2% 0 5%;
@@ -252,7 +253,7 @@ main .talent .experience {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: space-evenly;
   justify-content: flex-start;
   border-left: 1px solid gray;
   padding-left: 5%;
@@ -260,4 +261,39 @@ main .talent .experience {
 main .talent .experience li {
   padding: 5% 0;
   line-height: 1.5;
+}
+footer {
+  margin-bottom: 3%;
+  border-top: 1px black solid;
+  display: flex;
+  flex-direction: column;
+}
+footer .contact {
+  padding: 1% 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .contact p {
+  width: 33%;
+}
+footer .contact .phone {
+  text-align: center;
+}
+footer .contact .email {
+  text-align: right;
+}
+footer .portfolio {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .portfolio a {
+  padding: 4%;
+  background-color: #e8e6df;
+  color: black;
+  text-decoration: none;
+  font-size: 1.25rem;
+  white-space: nowrap;
 }
