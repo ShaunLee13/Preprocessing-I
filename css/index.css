@@ -1,1 +1,416 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  background-color: #f5f5ef;
+}
+body {
+  padding: 1% 3%;
+}
+/*End of Reset*/
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+p,
+li,
+a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 0;
+  border-bottom: 2px solid black;
+}
+@media (max-width: 500px) {
+  header {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+  }
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin-right: 5%;
+}
+@media (max-width: 500px) {
+  header nav {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    margin: 2%;
+  }
+}
+header nav a {
+  padding: 4%;
+  background-color: #e8e6df;
+  color: black;
+  text-decoration: none;
+}
+@media (max-width: 500px) {
+  header nav a {
+    margin: 1%;
+    text-align: center;
+  }
+}
+header h3 {
+  width: 10%;
+  justify-self: flex-end;
+  align-self: flex-end;
+}
+@media (max-width: 500px) {
+  header h3 {
+    width: 100%;
+    text-align: center;
+    padding: 3% 0;
+  }
+}
+header .role {
+  width: 25%;
+  text-align: end;
+}
+@media (max-width: 500px) {
+  header .role {
+    width: 98%;
+    text-align: center;
+  }
+}
+main .about-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 5% 2%;
+  border-top: 1px black solid;
+  border-bottom: 1px black solid;
+}
+@media (max-width: 500px) {
+  main .about-content {
+    max-width: 96%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-items: center;
+  }
+}
+main .about-content .img-container {
+  max-width: 48%;
+}
+@media (max-width: 500px) {
+  main .about-content .img-container {
+    max-width: 80%;
+  }
+}
+main .about-content .img-container img {
+  max-width: 100%;
+}
+main .about-content .about-container {
+  max-width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+@media (max-width: 500px) {
+  main .about-content .about-container {
+    max-width: 96%;
+  }
+}
+main .about-content .about-container .self {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  letter-spacing: 1.5px;
+  line-height: 3;
+}
+@media (max-width: 500px) {
+  main .about-content .about-container .self {
+    line-height: 1.5;
+  }
+}
+main .about-content .about-container .self h1 {
+  padding: 1%;
+  font-size: 3.5rem;
+  font-style: oblique;
+}
+main .about-content .about-container .self h2 {
+  padding: 2% 0 5%;
+  font-size: 2rem;
+}
+main .about-content .about-container .about {
+  text-align: right;
+  line-height: 2;
+  align-self: flex-end;
+}
+@media (max-width: 500px) {
+  main .about-content .about-container .about {
+    line-height: 1.5;
+    text-align: left;
+  }
+}
+main .talent {
+  padding: 5% 2%;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  main .talent {
+    max-width: 90%;
+    padding-left: 5%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+main .talent section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@media (max-width: 500px) {
+  main .talent section {
+    width: 100%;
+  }
+}
+main .talent section h2 {
+  padding: 2% 0 5%;
+  font-size: 2rem;
+}
+@media (max-width: 500px) {
+  main .talent section h2 {
+    align-self: center;
+  }
+}
+main .talent section .education {
+  padding-bottom: 5%;
+}
+main .talent section .education li {
+  padding: 5% 0 10%;
+  line-height: 1.5;
+}
+main .talent section .skills {
+  line-height: 1.25;
+}
+main .talent section .skills ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+main .talent .experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-left: 1px solid gray;
+  padding-left: 5%;
+}
+@media (max-width: 500px) {
+  main .talent .experience {
+    padding: 6% 0 0;
+    border: 0;
+  }
+}
+main .talent .experience li {
+  padding: 5% 0;
+  line-height: 1.5;
+}
+footer {
+  margin-bottom: 3%;
+  border-top: 1px black solid;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 500px) {
+  footer {
+    max-width: 90%;
+    align-content: center;
+  }
+}
+footer .contact {
+  padding: 1% 0;
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  footer .contact {
+    max-width: 100%;
+    flex-direction: column;
+    padding-bottom: 3%;
+  }
+}
+footer .contact p {
+  width: 33%;
+}
+@media (max-width: 500px) {
+  footer .contact p {
+    width: 100%;
+    padding: 2% 0 1%;
+    text-align: center;
+  }
+}
+footer .contact .phone {
+  text-align: center;
+}
+footer .contact .email {
+  text-align: right;
+}
+@media (max-width: 500px) {
+  footer .contact .email {
+    text-align: center;
+  }
+}
+footer .portfolio {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .portfolio a {
+  padding: 4%;
+  background-color: #e8e6df;
+  color: black;
+  text-decoration: none;
+  font-size: 1.25rem;
+  white-space: nowrap;
+}

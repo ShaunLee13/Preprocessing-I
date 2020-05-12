@@ -19,8 +19,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -54,6 +53,300 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	background-color: #f5f5ef;
 }
 
+body{
+	padding:1% 3%;
+}
+/*End of Reset*/
+
+@content: 'Montserrat', sans-serif;
+@heading: 'Josefin Sans', sans-serif;
+@space: 5% 2%;
+.spacing(){
+	display: flex;
+	justify-content: space-between;
+}
+.details(){
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.segment(){
+	padding:2% 0 5%;
+	font-size:2rem;
+}
+.button(){
+	padding:4%;
+	background-color:rgb(232, 230, 223);
+	color:black;
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5{
+	font-family:@heading;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+}
+
+p, li, a{
+	font-family:@content;
+	font-size:1rem;
+}	
+//End of General Styling
+
+//Beginning of Header Styling
+header{
+	.spacing();
+	padding: 1% 0;
+	border-bottom: 2px solid black;
+
+	@media(max-width:500px){
+		display: flex;
+		flex-flow: column;
+		align-items: flex-start;
+	}//Header MQ
+
+	nav{
+		.spacing();
+		width:50%;
+		margin-right:5%;
+
+		@media(max-width:500px){
+			width:50%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-self: center;
+			margin:2%;
+		}//Nav MQ
+
+		a{
+			.button();
+
+			@media(max-width:500px){
+				margin: 1%;
+				text-align: center;
+			}//Nav-A MQ
+		}//End of Nav-A styling
+	}//End of Header-Nav Styling
+	h3{
+		width:10%;
+		justify-self:flex-end;
+		align-self: flex-end;
+
+		@media(max-width:500px){
+			width:100%;
+			text-align:center;
+			padding:3% 0;
+		}//H3 MQ
+	}//End of Header-H3 Styling	
+	.role{
+		width: 25%;
+		text-align: end;
+
+		@media(max-width: 500px){
+			width: 98%;
+			text-align: center;
+		}//.role MQ
+	}//End of Header.role Styling
+}  //End of Header Styling
+
+//Beginning of Main Content Styling
+main{
+	.about-content{
+		.spacing();
+		padding:@space;
+		border-top: 1px black solid;
+		border-bottom: 1px black solid;
+
+		@media(max-width:500px){
+			max-width:96%;
+			.details();
+			align-items: center;
+		}//About Content MQ
+
+		.img-container{
+			max-width: 48%;
+
+			@media(max-width:500px){
+				max-width: 80%;
+			}//img-container MQ
+
+			img{
+				max-width: 100%;
+			}
+		}//End of Img-Container Styling
+		
+		.about-container{
+			max-width: 48%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+
+			@media(max-width:500px){
+				max-width:96%;
+			}//about container MQ
+
+			.self{
+				display: flex;
+				flex-direction: column;
+				text-align: center;
+				letter-spacing: 1.5px;
+				line-height: 3;
+
+				@media(max-width:500px){
+				line-height: 1.5;
+				}//self MQ
+
+				h1{
+					padding:1%;
+					font-size: 3.5rem;
+					font-style: oblique;
+				}
+
+				h2{
+					.segment();
+				}
+			}//End of Self Styling
+
+			.about{
+				text-align: right;
+				line-height: 2;
+				align-self: flex-end;
+
+				@media(max-width:500px){
+					line-height: 1.5;
+					text-align: left;
+				}//about MQ
+			}//End of About Styling
+		}//End of About-Container Styling
+	}//End of About-Content Styling
+
+	.talent{
+		padding:@space;
+		.spacing();
+
+		@media(max-width:500px){
+			max-width:90%;
+			padding-left:5%;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		section{
+			width: 50%;
+			.details();
+
+			@media(max-width:500px){
+				width: 100%;
+			}
+			h2{
+				.segment();
+
+				@media(max-width:500px){
+				align-self: center;
+				}
+			}//End of Section H2s
+
+			.education{
+				padding-bottom: 5%;
+				
+				li{
+				padding:5% 0 10%;
+				line-height: 1.5;
+				}//End of Education-Lists Styling
+			}//End of Education Styling	
+			
+			.skills{
+				line-height: 1.25;
+
+				ul{
+					list-style-type: disc;
+					list-style-position: inside;
+				}
+			}//End of Skills Styling
+		}//End of Talent-Sections Styling
+
+		.experience{
+			.details();
+			justify-content: flex-start;
+			border-left: 1px solid gray;
+			padding-left: 5%;
+
+			@media(max-width:500px){
+			padding:6% 0 0;
+			border: 0;
+			}
+
+			li{
+				padding: 5% 0;
+				line-height: 1.5;
+			}
+		}
+	}//End of Talent Styling
+}//End of Main Content Styling
+
+//Beginning of Footer Styling
+footer{
+	margin-bottom: 3%;
+	border-top: 1px black solid;
+	display:flex;
+	flex-direction: column;
+
+	@media(max-width:500px){
+		max-width: 90%;
+		align-content: center;
+	}
+
+	.contact{
+		padding: 1% 0;
+		width: 98%;
+		display: flex;
+		justify-content: space-between;
+
+		@media(max-width:500px){
+			max-width: 100%;
+			flex-direction: column;
+			padding-bottom: 3%;
+		}
+
+		p{
+			width: 33%;
+
+			@media(max-width:500px){
+				width:100%;
+				padding:2% 0 1%;
+				text-align: center;
+			}
+			
+		}//End of Contact-P
+		.phone{
+			text-align: center;
+		}//End of P-Phone
+		.email{
+			text-align: right;
+
+			@media(max-width:500px){
+				text-align: center;
+			}
+		}//End of P-Email
+
+	}//End of Contact Section
+
+	.portfolio{
+		margin-top: 2%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		a{
+			.button();
+			font-size: 1.25rem;
+			white-space: nowrap;
+		}//End of Portfolio Button
+	}//End of Portfolio
+}//End of Footer
