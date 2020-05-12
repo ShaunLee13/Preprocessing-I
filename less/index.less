@@ -65,7 +65,6 @@ body{
 
 @content: 'Montserrat', sans-serif;
 @heading: 'Josefin Sans', sans-serif;
-@segment: 2rem;
 @space: 5% 2%;
 .center(){
 	display: flex;
@@ -81,6 +80,10 @@ body{
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-start;
+}
+.segment(){
+	padding:2% 0 5%;
+	font-size:2rem;
 }
 .button(){
 	padding:2%;
@@ -116,11 +119,12 @@ header{
 		}//End of Nav-A styling
 	}//End of Header-Nav Styling
 	h3{
-		width:25%;
+		width:10%;
 		justify-self:flex-end;
 		align-self: flex-end;
 	}//End of Header-H3 Styling	
 	.role{
+		width: 25%;
 		text-align: end;
 	}//End of Header.role Styling
 } //End of Header Styling
@@ -154,11 +158,11 @@ main{
 				line-height: 3;
 				h1{
 					padding:1%;
-					font-size: 3rem;
+					font-size: 3.5rem;
+					font-style: oblique;
 				}
 				h2{
-					padding:2% 0 5%;
-					font-size:@segment;
+					.segment();
 				}
 			}//End of Self Styling
 
@@ -177,7 +181,15 @@ main{
 		section{
 			width: 46%;
 			.details();
-		}
+
+			h2{
+				.segment();
+			}//End of Section H2s
+
+			.education li{
+				padding-bottom: 10%;
+			}//End of Education-Lists Styling
+		}//End of Talent-Sections Styling
 	}//End of Talent Styling
 }//End of Main Content Styling
 

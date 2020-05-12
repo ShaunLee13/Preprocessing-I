@@ -169,11 +169,12 @@ header nav a {
   background-color: #e8e6df;
 }
 header h3 {
-  width: 25%;
+  width: 10%;
   justify-self: flex-end;
   align-self: flex-end;
 }
 header .role {
+  width: 25%;
   text-align: end;
 }
 main .about-content {
@@ -204,7 +205,8 @@ main .about-content .about-container .self {
 }
 main .about-content .about-container .self h1 {
   padding: 1%;
-  font-size: 3rem;
+  font-size: 3.5rem;
+  font-style: oblique;
 }
 main .about-content .about-container .self h2 {
   padding: 2% 0 5%;
@@ -226,4 +228,11 @@ main .talent section {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+}
+main .talent section h2 {
+  padding: 2% 0 5%;
+  font-size: 2rem;
+}
+main .talent section .education li {
+  padding-bottom: 10%;
 }
